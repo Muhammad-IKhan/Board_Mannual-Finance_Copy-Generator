@@ -1,0 +1,27 @@
+@media print {
+    .watermark {
+        display: block; /* Ensure the watermark is displayed */
+        background-repeat: no-repeat;
+        background-size: contain; /* Adjust size as necessary */
+        opacity: 0.3; /* Adjust opacity for printing */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px; /* Adjust size as needed */
+        height: 400px; /* Adjust size as needed */
+        z-index: 100; /* Ensure it appears above other content */
+    }
+
+    /* Optionally hide other elements if needed */
+    .no-print {
+        display: none;
+    }
+
+    /* Printing page in landscape mode */
+    @page {
+        size: landscape;
+        padding-top: 0;
+    }
+    
+}

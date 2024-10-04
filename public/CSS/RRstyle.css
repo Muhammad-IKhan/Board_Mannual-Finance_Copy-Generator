@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    font-size: 97%;
+    margin: 0;
+    padding: 0;
+}
+html, body, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.border-left-dotted {
+    border-left: 10px double green;
+}
+.border-right-dotted {
+    border-right: 10px double yellow;
+}
+.one4th {
+    width: 415px;
+    height: 940px;
+    background-color: rgb(174, 219, 204);
+    color: darkslategrey;
+    border: black 2px dotted;
+    padding-top: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+    position: relative; /* Add this for watermark positioning */
+}
+.watermark {
+    position: absolute;
+    top: 60%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Slightly smaller than the container */
+    height: 400px; /* Higher than width as requested */
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    pointer-events: none; /* Makes the watermark non-interactive */
+    z-index: 1;
+}
+.no-vertical-padding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.no-table-content {
+    position: absolute;
+    top: 770px;
+}
+/* Ensure content appears above watermark */
+.table, .text-center, .d-flex {
+    position: relative;
+    z-index: 2;
+}
